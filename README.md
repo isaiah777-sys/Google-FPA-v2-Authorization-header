@@ -46,4 +46,4 @@ return tokenParts.join("_");
 
 This means the final token format is `<timestamp>_<hash>_<identifier_key>`. E.g, *Google Workspace user*(internally called dasher)'s token might look like 1738383839_abc123def456_eua where *eua* indicates the hash was computed using email, obfuscated Gaia ID, and Google Workspace domain. The origin used in the hash is the *Origin* header value (eg. <ins>https://drive.google.com<ins>)
 
->Note: There are only three possible user identifier keys: *U* for obfuscated Gaia ID, *e* for email, and *a* for Google >Workspace domain. If you specify other letters, the API backend just ignores them. So it's actually possible to mint a >valid auth header containing arbitrary strings like `<timestamp>_<hash>_googlesauthteamhatesthisoneweirdtrick`
+>Note: There are only three possible user identifier keys: *U* for obfuscated Gaia ID, *e* for email, and *a* for Google >Workspace domain. If you specify other letters, the API backend just ignores them. So it's actually possible to mint a >valid auth header containing arbitrary strings like `<timestamp>_<hash>_googlesauthteamdoeswhatevertheywant`
